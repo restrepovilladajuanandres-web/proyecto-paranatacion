@@ -1,4 +1,148 @@
-<!DOCTYPE html>
+// Página Proyecto Paranatación - componente React (single-file)
+// Coloca este archivo en tu proyecto React (por ejemplo: src/App.jsx o src/App.tsx)
+// Instrucciones:
+// 1) Copia los 5 documentos (ANEXO Árbol..., ANEXO Formato encuesta..., ANEXO Taller de observación..., AVANCE DIAGNÓSTICO..., PROYECTO PARANATACION COMPLETO.docx) a la carpeta public/files/ de tu proyecto.
+// 2) Abre y edita el contenido directamente en este canvas. Puedes agregar secciones o ajustar textos.
+// 3) Este componente usa Tailwind CSS para estilos. Si no usas Tailwind, reemplaza clases por tu CSS preferido.
+// 4) También se incluye la versión estática HTML como una cadena (exportada) más abajo. Guarda esa cadena en un archivo index.html si necesitas la versión sin React.
+
+import React from 'react';
+
+export default function ProjectPage() {
+  const files = [
+    { name: 'ANEXO Árbol de problemas Juan Camilo Zapata - Juan Andrés Restrepo Villada.docx', path: '/files/ANEXO Árbol de problemas Juan Camilo Zapata - Juan Andrés Restrepo Villada.docx' },
+    { name: 'ANEXO Formato encuesta proyecto ParaNatacion.docx', path: '/files/ANEXO Formato encuesta proyecto ParaNatacion.docx' },
+    { name: 'ANEXO Taller de observación Proyecto ParaNatacion.docx', path: '/files/ANEXO Taller de observación Proyecto ParaNatacion.docx' },
+    { name: 'AVANCE DIAGNÓSTICO PUNTOS 1-11 (1).docx', path: '/files/AVANCE DIAGNÓSTICO PUNTOS 1-11 (1).docx' },
+    { name: 'PROYECTO PARANATACION COMPLETO.docx', path: '/files/PROYECTO PARANATACION COMPLETO.docx' }
+  ];
+
+  return (
+    <main className="min-h-screen bg-gradient-to-b from-sky-50 to-white p-6">
+      <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-2xl overflow-hidden">
+        <header className="p-8 bg-gradient-to-r from-sky-600 to-cyan-500 text-white">
+          <h1 className="text-3xl md:text-4xl font-extrabold">Efectos de la Natación Adaptada en la Salud Integral</h1>
+          <p className="mt-2 text-sm opacity-90">Proyecto de estudio y fortalecimiento de la selección de paranatación de Itagüí</p>
+          <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div>
+              <p className="text-sm">Creadores:</p>
+              <p className="font-semibold">Juan Andrés Restrepo Villada · Juan Camilo Zapata</p>
+            </div>
+            <div className="text-right">
+              <p className="italic">Eslogan</p>
+              <p className="font-bold">“Inclusión que transforma vidas, brazada a brazada.”</p>
+            </div>
+          </div>
+        </header>
+
+        <section className="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="md:col-span-2">
+            <h2 className="text-xl font-bold mb-3">Resumen ejecutivo</h2>
+            <p className="text-gray-700 leading-relaxed">Este proyecto analiza y fortalece el proceso de paranatación de Itagüí, buscando mejorar la salud física, la autonomía y la inclusión social de personas con discapacidad mediante intervenciones basadas en evidencia y trabajo interinstitucional. El diagnóstico incluyó encuestas, observación y análisis documental con 28 deportistas como población base.</p>
+
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <article className="p-4 border rounded-lg">
+                <h3 className="font-semibold">Misión</h3>
+                <p className="mt-2 text-sm text-gray-700">Promover el desarrollo integral de personas con discapacidad a través de la natación adaptada, fortaleciendo su salud física, autonomía, bienestar emocional e integración social mediante procesos formativos accesibles, incluyentes y basados en evidencia.</p>
+              </article>
+
+              <article className="p-4 border rounded-lg">
+                <h3 className="font-semibold">Visión</h3>
+                <p className="mt-2 text-sm text-gray-700">Para el 2030, consolidar el programa de paranatación de Itagüí como un referente regional en deporte adaptado, reconocido por su impacto social, sus resultados deportivos y su aporte a la inclusión y a la participación plena de las personas con discapacidad.</p>
+              </article>
+            </div>
+
+            <div className="mt-6">
+              <h3 className="font-semibold">Propósitos del proyecto</h3>
+              <ul className="list-disc list-inside mt-2 text-gray-700">
+                <li>Analizar las barreras, fortalezas y necesidades del programa actual.</li>
+                <li>Fortalecer los procesos deportivos, sociales e institucionales del grupo de paranatación.</li>
+                <li>Optimizar el acompañamiento técnico, psicológico y físico de los deportistas.</li>
+                <li>Generar propuestas que mejoren la accesibilidad, el transporte y el apoyo institucional.</li>
+                <li>Contribuir al bienestar, la autonomía y la calidad de vida de los participantes.</li>
+              </ul>
+            </div>
+
+            <div className="mt-6">
+              <h3 className="font-semibold">Resultados clave del diagnóstico</h3>
+              <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="p-3 bg-sky-50 rounded-lg border">
+                  <p className="text-sm font-medium">Participantes encuestados</p>
+                  <p className="text-2xl">28</p>
+                  <p className="text-xs text-gray-500">100% manifiestan que la natación mejora su calidad de vida</p>
+                </div>
+
+                <div className="p-3 bg-sky-50 rounded-lg border">
+                  <p className="text-sm font-medium">Retos identificados</p>
+                  <ul className="text-xs mt-2 list-disc list-inside text-gray-600">
+                    <li>Transporte accesible insuficiente (57%).</li>
+                    <li>Limitaciones económicas (68%).</li>
+                    <li>Necesidad de mayor orientación en hábitos saludables (46%).</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <aside className="p-4 border rounded-lg h-full">
+            <h3 className="font-semibold">Información rápida</h3>
+            <dl className="mt-3 text-sm text-gray-700">
+              <dt className="font-medium">Lugar</dt>
+              <dd className="mb-2">Acuaparque Ditaires, Itagüí</dd>
+
+              <dt className="font-medium">Población objetivo</dt>
+              <dd className="mb-2">28 deportistas con discapacidad física, sensorial e intelectual</dd>
+
+              <dt className="font-medium">Horario</dt>
+              <dd className="mb-2">Miércoles y jueves · 8:00 - 10:00 a.m.</dd>
+
+              <dt className="font-medium">Duración del proyecto</dt>
+              <dd>6 meses</dd>
+            </dl>
+
+            <div className="mt-6">
+              <h4 className="font-semibold">Archivos del proyecto</h4>
+              <ul className="mt-3 space-y-2">
+                {files.map((f, i) => (
+                  <li key={i} className="flex items-center justify-between">
+                    <span className="text-sm text-gray-800 truncate">{f.name}</span>
+                    <a href={f.path} download className="ml-3 inline-block px-3 py-1 text-xs font-medium rounded-md border shadow-sm hover:shadow-md">Descargar</a>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-3 text-xs text-gray-500">Coloca los archivos en <code className="bg-gray-100 px-1 py-0.5 rounded">public/files/</code> para que los enlaces funcionen.</p>
+            </div>
+          </aside>
+        </section>
+
+        <section className="p-8 border-t bg-gray-50">
+          <h2 className="text-xl font-bold">Plan de acción (resumido)</h2>
+          <ol className="list-decimal list-inside mt-3 text-gray-700">
+            <li>Validación del diagnóstico con ICRD y comité municipal.</li>
+            <li>Diseño de estrategias de mejora en transporte, nutrición y acceso a servicios.</li>
+            <li>Sesiones de capacitación en hábitos saludables y apoyo psicosocial.</li>
+            <li>Implementación piloto de ajustes metodológicos en entrenamientos.</li>
+            <li>Socialización de resultados y recomendaciones finales.</li>
+          </ol>
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            <button className="px-4 py-2 rounded-2xl border font-medium">Editar misión / visión</button>
+            <button className="px-4 py-2 rounded-2xl border font-medium">Agregar evidencia (fotos / gráficas)</button>
+            <button className="px-4 py-2 rounded-2xl bg-sky-600 text-white rounded-2xl font-semibold">Exportar a PDF</button>
+          </div>
+        </section>
+
+        <footer className="p-6 text-center text-xs text-gray-500">
+          © {new Date().getFullYear()} Proyecto Paranatación • Creadores: Juan Andrés Restrepo Villada & Juan Camilo Zapata
+        </footer>
+      </div>
+    </main>
+  );
+}
+
+// Versión ESTÁTICA EN HTML (cadena lista para guardar como index.html si lo deseas)
+export const STATIC_HTML = `<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -11,51 +155,116 @@
   <main class="max-w-5xl mx-auto bg-white shadow-lg rounded-2xl overflow-hidden">
 
     <header class="p-8 bg-gradient-to-r from-sky-600 to-cyan-500 text-white">
-      <h1 class="text-3xl font-extrabold">
-        Efectos de la Natación Adaptada en la Salud Integral
-       <ul class="mt-3 space-y-2 text-sm">
-  <li><a href="files/arbol-problemas.docx" class="text-sky-700 underline">Árbol de Problemas</a></li>
-  <li><a href="files/encuesta-paranatacion.docx" class="text-sky-700 underline">Encuesta</a></li>
-  <li><a href="files/taller-observacion.docx" class="text-sky-700 underline">Taller de Observación</a></li>
-  <li><a href="files/diagnostico.docx" class="text-sky-700 underline">Diagnóstico</a></li>
-  <li><a href="files/proyecto-completo.docx" class="text-sky-700 underline">Proyecto Completo</a></li>
-</ul>        
-      </h1>
-      <p class="text-sm mt-1 opacity-90">
-        Proyecto de estudio y fortalecimiento de la selección de paranatación de Itagüí
-      </p>
+      <h1 class="text-3xl font-extrabold">Efectos de la Natación Adaptada en la Salud Integral</h1>
+      <p class="text-sm mt-1 opacity-90">Proyecto de estudio y fortalecimiento de la selección de paranatación de Itagüí</p>
 
       <div class="mt-4">
         <p class="text-sm">Creadores:</p>
-        <p class="font-semibold">
-          Juan Andrés Restrepo Villada · Juan Camilo Zapata
-        </p>
+        <p class="font-semibold">Juan Andrés Restrepo Villada · Juan Camilo Zapata</p>
       </div>
 
       <p class="mt-3 italic">Eslogan</p>
-      <p class="font-bold">
-        “Inclusión que transforma vidas, brazada a brazada.”
-      </p>
+      <p class="font-bold">“Inclusión que transforma vidas, brazada a brazada.”</p>
     </header>
 
     <section class="p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-
       <div class="md:col-span-2">
         <h2 class="text-xl font-bold">Resumen ejecutivo</h2>
         <p class="mt-2 text-gray-700 leading-relaxed">
-          Este proyecto analiza y fortalece el proceso de paranatación de Itagüí,
-          buscando mejorar la salud física, la autonomía y la inclusión social de
-          personas con discapacidad mediante procesos deportivos accesibles e inclusivos.
+          Este proyecto analiza y fortalece el proceso de paranatación de Itagüí, buscando mejorar la salud física,
+          la autonomía y la inclusión social de personas con discapacidad a través de procesos deportivos accesibles
+          e inclusivos.
         </p>
 
         <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div class="p-4 border rounded-lg">
             <h3 class="font-semibold">Misión</h3>
             <p class="text-sm mt-2 text-gray-700">
-              Promover el desarrollo integral de personas con discapacidad a través
-              de la natación adaptada, fortaleciendo su salud física, autonomía y bienestar.
+              Promover el desarrollo integral de personas con discapacidad a través de la natación adaptada.
             </p>
           </div>
-
           <div class="p-4 border rounded-lg">
-            <h3 class="font-semibold"
+            <h3 class="font-semibold">Visión</h3>
+            <p class="text-sm mt-2 text-gray-700">
+              Ser un programa referente regional de deporte adaptado para 2030.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="font-semibold">Propósitos del proyecto</h3>
+          <ul class="list-disc list-inside text-gray-700 mt-2">
+            <li>Analizar barreras, fortalezas y necesidades del programa.</li>
+            <li>Fortalecer procesos deportivos, sociales e institucionales.</li>
+            <li>Optimizar acompañamiento técnico y psicológico.</li>
+            <li>Mejorar accesibilidad, transporte y apoyo institucional.</li>
+            <li>Aumentar bienestar, autonomía y calidad de vida.</li>
+          </ul>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="font-semibold">Resultados clave</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
+            <div class="p-3 bg-sky-50 border rounded-lg">
+              <p class="text-sm font-medium">Participantes encuestados</p>
+              <p class="text-2xl">28</p>
+              <p class="text-xs text-gray-500">100% reporta mejora en calidad de vida</p>
+            </div>
+            <div class="p-3 bg-sky-50 border rounded-lg">
+              <p class="text-sm font-medium">Retos identificados</p>
+              <ul class="text-xs mt-2 list-disc list-inside text-gray-600">
+                <li>Transporte accesible insuficiente (57%).</li>
+                <li>Limitaciones económicas (68%).</li>
+                <li>Falta de orientación en hábitos saludables (46%).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="p-4 border rounded-lg">
+        <h3 class="font-semibold">Información rápida</h3>
+        <dl class="mt-3 text-gray-700 text-sm">
+          <dt class="font-medium">Lugar:</dt>
+          <dd class="mb-2">Acuaparque Ditaires, Itagüí</dd>
+          <dt class="font-medium">Población objetivo:</dt>
+          <dd class="mb-2">28 deportistas con diversas discapacidades</dd>
+          <dt class="font-medium">Horario:</dt>
+          <dd class="mb-2">Miércoles y jueves · 8:00 - 10:00 a.m.</dd>
+          <dt class="font-medium">Duración del proyecto:</dt>
+          <dd>6 meses</dd>
+        </dl>
+
+        <h4 class="mt-6 font-semibold">Documentos del proyecto</h4>
+        <p class="mt-2 text-xs text-gray-500">Coloca los archivos en una carpeta “files/”.</p>
+
+        <ul class="mt-3 space-y-2 text-sm">
+  <li><a href="files/arbol-problemas.docx" class="text-sky-700 underline">Árbol de Problemas</a></li>
+  <li><a href="files/encuesta-paranatacion.docx" class="text-sky-700 underline">Encuesta</a></li>
+  <li><a href="files/taller-observacion.docx" class="text-sky-700 underline">Taller de Observación</a></li>
+  <li><a href="files/diagnostico.docx" class="text-sky-700 underline">Diagnóstico</a></li>
+  <li><a href="files/proyecto-completo.docx" class="text-sky-700 underline">Proyecto Completo</a></li>
+</ul>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="p-8 bg-gray-50 border-t">
+      <h2 class="text-xl font-bold">Plan de acción resumido</h2>
+      <ol class="list-decimal list-inside text-gray-700 mt-3">
+        <li>Validación del diagnóstico con el ICRD.</li>
+        <li>Diseño de estrategias de mejora.</li>
+        <li>Capacitaciones en hábitos saludables.</li>
+        <li>Ajustes metodológicos en entrenamientos.</li>
+        <li>Socialización de resultados.</li>
+      </ol>
+    </section>
+
+    <footer class="p-6 text-center text-xs text-gray-500">
+      © Proyecto Paranatación — Creadores: Juan Andrés Restrepo Villada & Juan Camilo Zapata
+    </footer>
+  </main>
+</body>
+</html>`;
+
+// FIN DEL ARCHIVO
